@@ -4,8 +4,6 @@
 
 > **"끊임없이 학습하고 탐구하며 성장하는 개발자 김은정입니다."**
 
-다양한 실무 경험을 통해 가독성 있고 효율적인 코드를 작성하여 서비스 발전에 기여하고자 노력하고자 합니다.
-
 <a href="mailto:[EMAIL_ADDRESS]" target="_blank">
    <img src="https://img.shields.io/badge/Gmail-EA4335.svg?style=flat-square&logo=Gmail&logoColor=white"/>
 </a>
@@ -37,8 +35,3 @@
 <p>
  <img src="https://go-skill-icons.vercel.app/api/icons?i=aws,github,jenkins,docker,figma,notion&titles=true"/><br/> 
 </p>
-
-<br>
-<br>
-
-<br/>
