@@ -1,3 +1,38 @@
+name: Update pinned GitHub Gists
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # 매일 한국 시간 오전 9시
+
+jobs:
+  productivity:
+    name: Update commit-time Gist
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update productive time
+        uses: maxam2017/productive-box@master
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.PRODUCTIVITY_GIST_ID }}
+          TIMEZONE: Asia/Seoul
+
+  github-stats:
+    name: Update GitHub stats Gist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update GitHub statistics
+        run: npx github-stats-box@1
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.STATS_GIST_ID }}
+          ALL_COMMITS: true
+          K_FORMAT: false
+          
       - name: Reduce stats spacing
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
