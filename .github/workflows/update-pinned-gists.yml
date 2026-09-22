@@ -1,34 +1,54 @@
-name: Update pinned GitHub Gists
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *" # 매일 한국 시간 오전 9시
-
-jobs:
-  productivity:
-    name: Update commit-time Gist
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update productive time
-        uses: maxam2017/productive-box@master
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: ${{ secrets.PRODUCTIVITY_GIST_ID }}
-          TIMEZONE: Asia/Seoul
-
-  github-stats:
-    name: Update GitHub stats Gist
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Update GitHub statistics
-        run: npx github-stats-box@1
+      - name: Reduce stats spacing
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.STATS_GIST_ID }}
-          ALL_COMMITS: true
-          K_FORMAT: false
+        run: |
+          node <<'NODE'
+          (async () => {
+            const gistId = process.env.GIST_ID;
+            const token = process.env.GH_TOKEN;
+            const headers = {
+              Authorization: `Bearer ${token}`,
+              Accept: 'application/vnd.github+json',
+            };
+
+            const response = await fetch(
+              `https://api.github.com/gists/${gistId}`,
+              { headers }
+            );
+
+            if (!response.ok) {
+              throw new Error(`Could not read Gist: ${response.status}`);
+            }
+
+            const gist = await response.json();
+            const fileName = Object.keys(gist.files)[0];
+            const content = gist.files[fileName].content;
+
+            // ':' 뒤의 긴 공백을 두 칸으로 축소합니다.
+            const compactContent = content.replace(/: +(?=\d)/g, ':  ');
+
+            const update = await fetch(
+              `https://api.github.com/gists/${gistId}`,
+              {
+                method: 'PATCH',
+                headers: {
+                  ...headers,
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  files: {
+                    [fileName]: { content: compactContent },
+                  },
+                }),
+              }
+            );
+
+            if (!update.ok) {
+              throw new Error(`Could not update Gist: ${update.status}`);
+            }
+          })().catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
