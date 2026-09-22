@@ -1,37 +1,50 @@
-![header](https://capsule-render.vercel.app/api?type=blur&color=auto&height=300&section=header&text=E.Jeong&20fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=blur&color=auto&height=200&section=header&text=E.Jeong&20fontSize=20)
 
 ## 📝 About Me
 
-> **"끊임없이 학습하고 탐구하며 성장하는 개발자 김은정입니다."**
+> **배움을 코드로 풀어내며, 더 나은 서비스로 만들어 내는 개발자 김은정입니다.**
 
-<a href="mailto:[EMAIL_ADDRESS]" target="_blank">
-   <img src="https://img.shields.io/badge/Gmail-EA4335.svg?style=flat-square&logo=Gmail&logoColor=white"/>
-</a>
-<a href="https://www.instagram.com/e._jeong/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F.svg?style=flat-square&logo=Instagram&logoColor=white"/>
-</a>
-<a href="https://github.com/KEJ-CL" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717.svg?style=flat-square&logo=GitHub&logoColor=white"/>
-</a>
-<br>
-<br>
+<p>
+  <a href="mailto:keunjeong613@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335.svg?style=flat-square&logo=Gmail&logoColor=white" alt="Gmail" />
+  </a>
+  <a href="https://www.instagram.com/e._jeong/">
+    <img src="https://img.shields.io/badge/Instagram-E4405F.svg?style=flat-square&logo=Instagram&logoColor=white" alt="Instagram" />
+  </a>
+  <a href="https://github.com/Kejeong">
+    <img src="https://img.shields.io/badge/GitHub-181717.svg?style=flat-square&logo=GitHub&logoColor=white" alt="GitHub" />
+  </a>
+</p>
+</br>
 
 ## 🛠 Tech Stack
 
-### 🚀 Backend
-
-<p>
- <img src="https://go-skill-icons.vercel.app/api/icons?i=java,spring,gradle,oracle,mysql,postgresql&titles=true"/><br/> 
-</p>
-
-### 🎨 Frontend
-
-<p>
- <img src="https://go-skill-icons.vercel.app/api/icons?i=javascript,typescript,vue,nuxt,tailwindcss,vuetify,react&titles=true"/><br/> 
-</p>
-
-### 🔧 Tools & Infra
-
-<p>
- <img src="https://go-skill-icons.vercel.app/api/icons?i=aws,github,jenkins,docker,figma,notion&titles=true"/><br/> 
-</p>
+<table>
+  <tr>
+    <td align="center" valign="top" width="20%">
+      <strong>🚀 Backend</strong>
+      <br /><br />
+      <img src="https://go-skill-icons.vercel.app/api/icons?i=java,spring,gradle&titles=true&perline=3" alt="Java, Spring, Gradle" />
+    </td>
+    <td align="center" valign="top" width="20%">
+      <strong>🗄️ Database</strong>
+      <br /><br />
+      <img src="https://go-skill-icons.vercel.app/api/icons?i=oracle,mysql,postgresql,redis&titles=true&perline=3" alt="Oracle, MySQL, PostgreSQL, Redis" />
+    </td>
+    <td align="center" valign="top" width="20%">
+      <strong>🎨 Frontend</strong>
+      <br /><br />
+      <img src="https://go-skill-icons.vercel.app/api/icons?i=javascript,vue,nuxt,tailwindcss,react&titles=true&perline=3" alt="JavaScript, Vue, Nuxt, Tailwind CSS, React" />
+    </td>
+    <td align="center" valign="top" width="20%">
+      <strong>🔧 CI/CD</strong>
+      <br /><br />
+      <img src="https://go-skill-icons.vercel.app/api/icons?i=aws,jenkins,docker,github,notion,slack&titles=true&perline=3" alt="AWS, Jenkins, Docker, GitHub, Notion, Slack" />
+    </td>
+    <td align="center" valign="top" width="20%">
+      <strong>🤖 AI</strong>
+      <br /><br />
+      <img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt,claude&titles=true&perline=3" alt="ChatGPT, Claude, Gemini" />
+    </td>
+  </tr>
+</table>
