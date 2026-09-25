@@ -39,7 +39,7 @@
     <td align="center" valign="top" width="20%">
       <strong>🔧 CI/CD</strong>
       <br /><br />
-      <img src="https://go-skill-icons.vercel.app/api/icons?i=aws,jenkins,docker,github,notion,slack&titles=true&perline=3" alt="AWS, Jenkins, Docker, GitHub, Notion, Slack" />
+      <img src="https://go-skill-icons.vercel.app/api/icons?i=aws,jenkins,docker,github&titles=true&perline=3" alt="AWS, Jenkins, Docker, GitHub" />
     </td>
     <td align="center" valign="top" width="20%">
       <strong>🤖 AI</strong>
